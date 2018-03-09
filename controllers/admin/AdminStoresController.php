@@ -379,8 +379,8 @@ class AdminStoresControllerCore extends AdminController
                         $hours[] = explode(' | ', $_POST['hours'][$i][$lang['id_lang']]);
                         unset($_POST['hours'][$i][$lang['id_lang']]);
                     } else {
-                        $hours[] = explode(' | ', $_POST['hours'][$i]);
-                        unset($_POST['hours'][$i]);
+                        $hours[] = explode(' | ', $_POST['hours_'.$i]);
+                        unset($_POST['hours_'.$i]);
                     }
                 }
                 $encodedHours[$lang['id_lang']] = json_encode($hours);
